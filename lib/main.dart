@@ -58,7 +58,6 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
   double? _volumeCubicFeet;
   int? _wholeFeet;
   int? _inches;
-  int? _yarns;
   
   // Input validation for positive numbers
   String? _validatePositiveNumber(String? value) {
@@ -99,13 +98,12 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
       final wholeInches = totalInches.floor();
       
       final fractionalInches = totalInches - wholeInches;
-      final yarns = (fractionalInches * 12).floor(); // 1 inch = 12 yarns
+      (fractionalInches * 12).floor(); // 1 inch = 12 yarns
       
       setState(() {
         _volumeCubicFeet = roundedVolume;
         _wholeFeet = wholeFeet;
         _inches = wholeInches;
-        _yarns = yarns;
       });
     }
   }
@@ -118,7 +116,6 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
       _volumeCubicFeet = null;
       _wholeFeet = null;
       _inches = null;
-      _yarns = null;
     });
   }
 
