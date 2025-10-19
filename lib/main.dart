@@ -180,10 +180,18 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
               ),
               const SizedBox(height: 24.0),
               
-              // Calculate button
-              ElevatedButton(
-                onPressed: _calculateVolume,
-                child: const Text('Calculate Volume', style: TextStyle(fontSize: 16)),
+              // Calculate button - positioned to the right
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FloatingActionButton(
+                    onPressed: _calculateVolume,
+                    backgroundColor: Colors.green.shade700,
+                    foregroundColor: Colors.white,
+                    child: const Icon(Icons.calculate, size: 28),
+                    tooltip: 'Calculate Volume',
+                  ),
+                ],
               ),
               const SizedBox(height: 24.0),
               
