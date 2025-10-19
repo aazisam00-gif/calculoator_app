@@ -143,31 +143,39 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Input fields
-              TextFormField(
-                controller: _lengthController,
-                decoration: const InputDecoration(
-                  labelText: 'Enter Length (ft)',
-                  hintText: 'e.g., 12',
-                  prefixIcon: Icon(Icons.straighten),
-                ),
-                keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                validator: _validatePositiveNumber,
-                inputFormatters: [
-                  FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$')),
-                ],
-              ),
-              const SizedBox(height: 16.0),
-              TextFormField(
-                controller: _circumferenceController,
-                decoration: const InputDecoration(
-                  labelText: 'Enter Circumference (in)',
-                  hintText: 'e.g., 36',
-                  prefixIcon: Icon(Icons.radio_button_unchecked),
-                ),
-                keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                validator: _validatePositiveNumber,
-                inputFormatters: [
-                  FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$')),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      controller: _lengthController,
+                      decoration: const InputDecoration(
+                        labelText: 'Enter Length (ft)',
+                        hintText: 'e.g., 12',
+                        prefixIcon: Icon(Icons.straighten),
+                      ),
+                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                      validator: _validatePositiveNumber,
+                      inputFormatters: [
+                        FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$')),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 12.0),
+                  Expanded(
+                    child: TextFormField(
+                      controller: _circumferenceController,
+                      decoration: const InputDecoration(
+                        labelText: 'Enter Circumference (in)',
+                        hintText: 'e.g., 36',
+                        prefixIcon: Icon(Icons.radio_button_unchecked),
+                      ),
+                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                      validator: _validatePositiveNumber,
+                      inputFormatters: [
+                        FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*$')),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 24.0),
