@@ -149,8 +149,8 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
                     child: TextFormField(
                       controller: _lengthController,
                       decoration: const InputDecoration(
-                        labelText: 'Enter Length (ft)',
-                        hintText: 'e.g., 12',
+                        labelText: 'Length (ft)',
+                     
                         prefixIcon: Icon(Icons.straighten),
                       ),
                       keyboardType: const TextInputType.numberWithOptions(decimal: true),
@@ -165,8 +165,8 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
                     child: TextFormField(
                       controller: _circumferenceController,
                       decoration: const InputDecoration(
-                        labelText: 'Enter Circumference (in)',
-                        hintText: 'e.g., 36',
+                        labelText: 'Circumference (in)',
+                      
                         prefixIcon: Icon(Icons.radio_button_unchecked),
                       ),
                       keyboardType: const TextInputType.numberWithOptions(decimal: true),
@@ -209,7 +209,7 @@ class _TimberLogCalculatorState extends State<TimberLogCalculator> {
                         const Divider(),
                         const SizedBox(height: 8.0),
                         Text(
-                          'Result: $_wholeFeet feet $_inches inch',
+                          'Result: $_wholeFeet ft $_inches in',
                           style: const TextStyle(fontSize: 16),
                         ),
                       ],
